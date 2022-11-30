@@ -11,11 +11,12 @@ button.addEventListener("click", function () {
     newParentDivElement.classList.add("m-auto", "flex-wrap", "d-flex");
     mainElement.append(newParentDivElement);
 
+    newParentDivElement.createSquare();
+    /*
     //CICLO e creo i vari div che comporranno il divParent
     for (let i = 1; i <= 100; i++) {
-        const newDivElement = createSquare("div", "<span>" + i + "</span>")
-        //INSERISCO nell'innerHTML del divChild i numeri del contatore e le classi
-        //newDivElement.innerHTML = "<span>" + i + "</span>"
+        const newDivElement = document.createElement("div");
+        newDivElement.innerHTML = "<span>" + i + "</span>";
         newDivElement.classList.add("box", "d-flex", "justify-content-center", "align-items-center", "fs-3");
         newParentDivElement.append(newDivElement);
 
@@ -23,14 +24,19 @@ button.addEventListener("click", function () {
         newDivElement.addEventListener("click", function () {
             newDivElement.classList.toggle("bg-danger");
         });
-    }
+    }*/
 });
 
 
-function createSquare(element, innerHTML) {
-    const newElement = document.createElement(element);
-    newElement.innerHTML = innerHTML;
+function createSquare() {
+    for (let i = 1; i <= 100; i++) {
+        const newElement = document.createElement("div");
+        newElement.innerHTML = "<span>" + i + "</span>";
+        newElement.classList.add("box", "d-flex", "justify-content-center", "align-items-center", "fs-3");
 
-    return newElement;
+        newElement.addEventListener("click", function () {
+            newElement.classList.toggle("bg-danger");
+        });
+    }
 }
 
