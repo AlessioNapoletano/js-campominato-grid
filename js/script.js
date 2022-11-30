@@ -1,7 +1,9 @@
 
 const button = document.querySelector("button");
 button.addEventListener("click" , function(){
-    
+    //AGGIUGNO la classe d-none per far scomparire il bottone, in quanto il gioco è avviato
+    button.classList.add("d-none");
+
     //CREO il divParent che conterra le piccole caselle
     const mainElement = document.querySelector("main");
     const newParentDivElement = document.createElement("div");
@@ -31,10 +33,11 @@ button.addEventListener("click" , function(){
 
 //myGetElementById("output", "fw-bold" , "ciao");
 
-//FUNCTION
+/*FUNCTION
 function myGetElementById(elementId, elementClass, elementInner){
     const elementName = document.getElementById(elementId);
     elementName.classList.add(elementClass);
     elementName.innerHTML = elementInner;
 
 }
+*/
