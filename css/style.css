@@ -1,0 +1,30 @@
+header{
+    height: 10vh;
+    padding: .5rem;
+    
+}
+main {
+    height: 82vh;
+    background-color: #7fffd4;
+}
+
+footer{
+    height: 8vh;
+}
+div {
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+
+div div.box {
+    width: calc(100%/10);
+    height: calc(100%/10);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.font-red{
+    color: red;
+}
