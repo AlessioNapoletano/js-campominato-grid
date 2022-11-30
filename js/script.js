@@ -5,6 +5,9 @@ button.addEventListener("click" , function(){
         const divElement = document.querySelector("div");
         divElement.classList.add("flex-wrap" , "d-flex");
         const newDivElement = document.createElement("div");
+        newDivElement.addEventListener("click", function(){
+            newDivElement.classList.toggle("bg-danger");
+        });
         newDivElement.innerHTML = "<span>" + i + "</span>"
         newDivElement.classList.add("box", "d-flex" , "justify-content-center", "align-items-center" , "fs-3");
         divElement.append(newDivElement);
