@@ -13,9 +13,9 @@ button.addEventListener("click", function () {
 
     //CICLO e creo i vari div che comporranno il divParent
     for (let i = 1; i <= 100; i++) {
-        const newDivElement = document.createElement("div");
+        const newDivElement = createSquare("div", "<span>" + i + "</span>")
         //INSERISCO nell'innerHTML del divChild i numeri del contatore e le classi
-        newDivElement.innerHTML = "<span>" + i + "</span>"
+        //newDivElement.innerHTML = "<span>" + i + "</span>"
         newDivElement.classList.add("box", "d-flex", "justify-content-center", "align-items-center", "fs-3");
         newParentDivElement.append(newDivElement);
 
@@ -25,14 +25,12 @@ button.addEventListener("click", function () {
         });
     }
 });
-/*
-function createSquare(element, classList, innerHTML) {
+
+
+function createSquare(element, innerHTML) {
     const newElement = document.createElement(element);
     newElement.innerHTML = innerHTML;
-    const classList = [];
-    for (let i = 0; i < classList.length; i++) { 
 
-    }
+    return newElement;
 }
 
-*/
