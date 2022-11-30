@@ -10,12 +10,11 @@ button.addEventListener("click" , function(){
     mainElement.innerHTML="";
     //CREO il divParent che conterra le piccole caselle
     const newParentDivElement = document.createElement("div");
-    newParentDivElement.classList.add("m-auto");
+    newParentDivElement.classList.add("m-auto" , "flex-wrap" , "d-flex");
     mainElement.append(newParentDivElement);
 
     //CICLO e creo i vari div che comporranno il divParent
     for(let i=1; i<=100; i++){
-        newParentDivElement.classList.add("flex-wrap" , "d-flex");
         const newDivElement = document.createElement("div");
 
         //AGGIUNGO evento al click su un divElement
@@ -30,15 +29,3 @@ button.addEventListener("click" , function(){
     }
 });
 
-
-
-
-//myGetElementById("output", "fw-bold" , "ciao");
-
-
-function myGetElementById(elementId, elementClass, elementInner){
-    const elementName = document.getElementById(elementId);
-    elementName.classList.add(elementClass);
-    elementName.innerHTML = elementInner;
-
-}
